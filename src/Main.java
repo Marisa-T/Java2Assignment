@@ -114,6 +114,7 @@ public class Main {
         System.out.println("Viteza in metri pe secunda:" + speedMPerSec);
         System.out.println("Viteza in km pe ora:" + speedKmPerHour);
         System.out.println("Viteza in mile pe ora:" + speedMilesPerHour);
+
     }
 
     public static void displayPattern() {
