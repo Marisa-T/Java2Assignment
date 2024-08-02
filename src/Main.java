@@ -33,9 +33,7 @@ public class Main {
         System.out.println("Inches in metri sunt:" + meters);
 
         //exercise 7
-        System.out.println("Viteza in metri pe secunda: %.2f m/s%n", speedMPerSec);
-        System.out.println("Viteza in km pe ora: %.2f km/h%n", speedKmPerHour);
-        System.out.println("Viteza in mile pe ora: %.2f mph%n", speedMilesPerHour);
+        displaySpeed(30000, 7, 8, 8);
 
         //exercise 9
         displayPattern();
@@ -108,11 +106,14 @@ public class Main {
         return inches * CONVERSION_FACTOR;
     }
 
-    public static void speed(double distanceMeters, int hours, int minutes, int seconds) {
-        double totalTimeSec = hours * 3600 + minutes * 60 + seconds;
-        double speedMPerSec = distanceMeters / totalTimeSec;
-        double speedKmPerHour = (distanceMeters / 1000) / (totalTimeSec / 3600);
-        double speedMilesPerHour = (distanceMeters / 1609.34) / (totalTimeSec / 3600);
+    public static void displaySpeed(float distanceMeters, int hours, int minutes, int seconds) {
+        float totalTimeSec = hours * 3600 + minutes * 60 + seconds;
+        float speedMPerSec = distanceMeters / totalTimeSec;
+        float speedKmPerHour = (distanceMeters / 1000) / (totalTimeSec / 3600);
+        float speedMilesPerHour = (float) (distanceMeters / 1609.34) / (totalTimeSec / 3600);
+        System.out.println("Viteza in metri pe secunda:" + speedMPerSec);
+        System.out.println("Viteza in km pe ora:" + speedKmPerHour);
+        System.out.println("Viteza in mile pe ora:" + speedMilesPerHour);
     }
 
     public static void displayPattern() {
